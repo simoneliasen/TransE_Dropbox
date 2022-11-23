@@ -1,4 +1,6 @@
 #! /usr/bin/python
+import sys
+sys.path.insert(1, './')
 from FB15k_exp import *
 import argparse
 import json
@@ -35,7 +37,7 @@ def main():
             batch_size=config["batch_size"],
             test_all=10,
             neval=1000,
-            datapath='../data/'
+            datapath='data/'
         )
     else:
         launch(
@@ -52,7 +54,7 @@ def main():
             batch_size=args.batch_size,
             test_all=10,
             neval=1000,
-            datapath='../data/'
+            datapath='data/'
         )
 
 
